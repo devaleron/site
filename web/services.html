@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Такси СНЕЖОК</title>
+		<link href="web/css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		  <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!---strat-wrap----->
+			<!---strat-header----->
+			<div class="header" id="rates">
+				<div class="wrap">
+					<!---start-top-nav---->
+					<div class="top-nav">
+						<ul>
+							<li><a href="#top" class="scroll2">Главная</a></li>
+							<li><a href="#about" class="scroll2">О компании</a></li>
+							<li><a href="#noradio" class="scroll2">Работа без рации</a></li>
+							<li><a href="#news" class="scroll2">Новости</a></li>
+							<li class="active"><a href="#rates" class="scroll2">Тарифы</a></li>
+							<li><a href="#contact" class="scroll2">Обратная связь</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+					<div class="clear"> </div>
+					<!---End-top-nav---->
+				</div>
+			</div>
+			<!---End-header----->
+		 <!---start-contnet---->
+		 <div class="content">
+		 	<!---strart-services----->
+		 	<div class="services">
+		 		<div class="wrap">
+  					<h4>Наши тарифы</h4>
+  					<div class="section group" style="text-align: center;">
+						<img src="web/images/tarif_2015.jpg">
+					</div>
+				</div>
+			</div>
+		 	<!---End-services----->
+		 	<!---End-about-us----->
+		 	<div class="bottom-grids">
+				<div class="wrap">
+					<div class="social-links">
+						<span><a href="https://vk.com/taxi_280000">Группа ВКонтакте</a></span>
+					</div>
+					<div class="mobile-no">
+						<span>28-0000</span>
+					</div>
+					<div class="top-to-page">
+						<a href="#top" class="scroll"> </a>
+						<div class="clear"> </div>
+					</div>
+				</div>
+		 	</div>
+		 </div>
+		 <!---End-contnet---->
+		</div>
+		<!---End-wrap----->
+	</body>
+</html>
+

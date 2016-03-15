@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "taxi";
+  src:url("fonts/taxi.eot");
+  src:url("fonts/taxi.eot?#iefix") format("embedded-opentype"),
+    url("fonts/taxi.woff") format("woff"),
+    url("fonts/taxi.ttf") format("truetype"),
+    url("fonts/taxi.svg#taxi") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "taxi" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="taxi-icon-"]:before,
+[class*=" taxi-icon-"]:before {
+  font-family: "taxi" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.taxi-icon-android:before {
+  content: "\61";
+}
+.taxi-icon-map-marker:before {
+  content: "\62";
+}
+.taxi-icon-map-pin-streamline:before {
+  content: "\63";
+}
+.taxi-icon-ios-location:before {
+  content: "\64";
+}
+.taxi-icon-ios-location-outline:before {
+  content: "\65";
+}
+.taxi-icon-times:before {
+  content: "\66";
+}
+.taxi-icon-times-circle:before {
+  content: "\67";
+}
+.taxi-icon-check-mark:before {
+  content: "\68";
+}
+.taxi-icon-check-mark-2:before {
+  content: "\69";
+}
+.taxi-icon-angle-left:before {
+  content: "\6a";
+}
+.taxi-icon-angle-right:before {
+  content: "\6b";
+}
+.taxi-icon-angle-down:before {
+  content: "\6c";
+}
+.taxi-icon-angle-up:before {
+  content: "\6d";
+}
+.taxi-icon-calendar:before {
+  content: "\6e";
+}
+.taxi-icon-circle:before {
+  content: "\6f";
+}
+.taxi-icon-circle-o:before {
+  content: "\70";
+}
+.taxi-icon-android-settings:before {
+  content: "\71";
+}
+.taxi-icon-key:before {
+  content: "\72";
+}
+.taxi-icon-lock:before {
+  content: "\73";
+}
+.taxi-icon-unlock-alt:before {
+  content: "\74";
+}
+.taxi-icon-telephone:before {
+  content: "\75";
+}
+.taxi-icon-question-circle:before {
+  content: "\76";
+}
+.taxi-icon-arrow-down:before {
+  content: "\77";
+}
+.taxi-icon-arrow-small-down:before {
+  content: "\78";
+}
+.taxi-icon-arrow-down-1:before {
+  content: "\79";
+}
+.taxi-icon-arrow-down-2:before {
+  content: "\7a";
+}

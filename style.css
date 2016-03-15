@@ -1,0 +1,373 @@
+
+/****************  ОБЩИЕ СТИЛИ МОДАЛЬНЫХ ОКОН С ФОРМАМИ  *****************/
+.modal {
+    border-radius: 5px;
+    border: 1px #9C9C9C solid;
+    box-shadow: 0px 0px 20px #8C8C8C;
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+    font-family: sans-serif;
+    /*padding: 20px;*/
+}
+
+.modal .close {
+    font-size: 20px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: #9E3E3E;
+    cursor: pointer;
+}
+
+.overlay {
+    z-index:3;
+    position:fixed;
+    background-color:#D8D8D8;
+    opacity:0.8;
+    -moz-opacity:0.8;
+    filter:alpha(opacity=80);
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    cursor:pointer;
+    display:none;
+}
+
+.modal .header {
+    text-align: center;
+    padding: 10px 20px;
+    background: #F5C34C;
+    color: #fff;
+    font-size: 20px;
+    border-bottom: 1px solid #B5974E;
+    border-radius: 4px 4px 0px 0px;
+    text-shadow: 0px 0px 1px #000;
+}
+
+.modal form {
+    margin-bottom: 0px;
+}
+
+.modal .main {
+    padding: 20px;
+}
+
+.modal p {
+    margin:5px 0px;
+}
+
+.modal span.editf {
+    padding: 4px;
+    width: auto;
+    background: #fff;
+    border: 1px solid #D2C8B1;
+}
+
+.modal input[type="button"] {
+    display: inline-block;
+    background: #F1F1F1;
+    margin-top: 10px;
+    outline: none;
+    font-size: 13px;
+    border: 1px solid #BDBDBD;
+    padding: 8px 0px;
+    cursor: pointer;
+}
+
+.modal input[type="button"]:hover {
+    background: #E0DEDE;
+}
+
+.modal input[type="text"] {
+    outline: none;
+    border: none;
+    font-size: 13px;
+}
+
+.modal form span.icon{
+    position: relative;
+    top: 2px;
+}
+
+.modal p span.icon:hover{
+    opacity: 1;
+}
+
+
+.modal div.hidden-msg {
+    display: none;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.modal div.error-msg {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #A04242;
+}
+/****************  ОБЩИЕ СТИЛИ МОДАЛЬНЫХ ОКОН С ФОРМАМИ  *****************/
+
+
+
+
+
+
+
+
+/**********************  ФОРМА ОФОРМЛЕНИЯ ЗАКАЗА  ************************/
+
+#order {
+    width: 740px;
+    margin-top: -250px;
+    margin-left: -370px;
+}
+
+#order div.block {
+    height: 50px;
+    position: relative;
+    padding: 2px 10px;
+    font-size: 15px;
+    border: 1px solid #fff;
+}
+
+#order input[name="street"]{
+    width: 122px;
+}
+
+#order input.house{
+    width: 35px;
+}
+
+#order div.block p{
+    margin-bottom: 15px;
+    margin-top: 14px;
+    width: 180px;
+    float: left;
+}
+
+#order div.block > div{
+    float: left;
+}
+
+#order div.withlist{
+    width: 190px;
+    margin-top: 16px;
+}
+
+#order div.number{
+    width: 308px;
+    margin-top: 16px;
+}
+
+#order  div.info-msg{
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+
+#order div.number > div {
+    float: left;
+    width: 102px;
+}
+
+
+#order div.auto_type {
+    margin-bottom: 5px;
+}
+
+
+#order div.auto_type > span{
+    padding: 2px 6px;
+    font-size: 14px;
+    border: 1px solid #B1B1B1;
+    cursor: pointer;
+}
+
+#order div.main_cont {
+    /*display: none;*/
+}
+
+
+#order input.send_order {
+    float: right;
+    display: none;
+    margin-bottom: 15px;
+}
+
+#order input[type="button"] {
+    width: 100%;
+}
+
+#order div.block.active{
+    background: #FFF1D0;
+    border: 1px solid #ECD8A7;
+}
+
+#order .list {
+    left: 238px;
+    margin-top: 3px;
+    border: 1px solid #D2C8B1;
+    background: #FFFBF1;
+}
+
+#order input.one {
+    width: 20px;
+}
+
+#order .list,
+#order div.auto_type > div {
+    display: none;
+    z-index: 10;
+    position: absolute;
+
+}
+
+#order div.auto_type > div {
+    left: 251px;
+    margin-top: 1px;
+    border: 1px solid #B1B1B1;
+    background: #FFFFFF;
+}
+
+#order .list.active{
+    display: block;
+}
+
+#order .list ul,
+#order div.auto_type > div ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+#order .list ul li {
+    border-top: 1px solid #FFFBF1;
+    border-bottom: 1px solid #FFFBF1;
+}
+
+#order .list ul li,
+#order div.auto_type > div ul li{
+    padding: 4px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#order div.auto_type > div ul li{
+    border-top: 1px solid #ECECEC;
+}
+
+#order .list ul li:hover {
+    background: #FFF1D0;
+    border-top: 1px solid #ECD8A7;
+    border-bottom: 1px solid #ECD8A7;
+}
+
+#order div.auto_type > div ul li:hover{
+    background: #F1F1F1;
+}
+
+#order div.addblock {
+    text-align: center;
+    margin: 10px 0px 15px 0px;
+    color: #46674E;
+}
+
+#order getprice {
+
+}
+
+#order div.addblock span{
+    background: #F1FFF1;
+    border: 1px solid #BDE0BD;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#order div.addblock span:hover{
+    background: #E6F7E6;
+}
+
+div.order_block_cont {
+    display: none;
+}
+
+#order div.block div.close_block {
+    position: absolute;
+    top: 20px;
+    font-size: 14px;
+    right: 2px;
+    color: #9E3E3E;
+    cursor: pointer;
+}
+
+#order div.options {
+    padding: 10px 0px;
+}
+
+#order div.options input{
+    margin-right: 20px;
+}
+
+#order div.options label{
+    font-size: 14px;
+}
+
+#order input[name="comment"] {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #D2C8B1;
+}
+
+/**********************  ФОРМА ОФОРМЛЕНИЯ ЗАКАЗА  ************************/
+
+
+
+
+
+
+
+
+/*************************  ФОРМА АВТОРИЗАЦИИ  ***************************/
+#auth p {
+    width: 260px;
+    display: inline-block;
+}
+
+#auth {
+    width: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+}
+
+
+#auth .icon{
+    margin-left: 5px;
+    opacity: 0.7;
+}
+
+#auth input[type="text"] {
+    width: 250px;
+}
+
+#auth input[type="button"].send{
+    float: left;
+}
+
+#auth input[type="button"] {
+    width: 125px;
+}
+
+#auth input[type="button"].getpass{
+    float: right;
+}
+/*************************  ФОРМА АВТОРИЗАЦИИ  ***************************/

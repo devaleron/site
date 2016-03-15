@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Такси СНЕЖОК</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+		<link href="web/css/style.css" rel="stylesheet" type="text/css"  media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href="web/css/slider.css" rel="stylesheet" type="text/css"  media="all" />
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="icons/taxi_icons/styles.css?t=342">
+		<script type="text/javascript" src="script.js"></script>
+		<style>
+			.pageinfo {
+				padding: 30px;
+				background: #ffffff;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.pageinfo h1 {
+				color: #f5c34c;
+				font-size: 2.5em;
+				margin: 0px 0px 15px 100px;
+				font-weight: bold;
+			}
+			.pageinfo h2 {
+				color: #f5c34c;
+				font-size: 1.5em;
+				margin: 15px 0px 15px 25px;
+				font-weight: bold;
+			}
+			.pageinfo p {
+				margin: 10px 0px 8px 5px;
+			}
+			.pageinfo b {
+				font-weight: bold;
+				margin-right: 5px;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="auth" class="modal">
+		<span class="icon taxi-icon-times-circle close" title="Закрыть окно авторизации"></span>
+		<div class="header">Авторизация</div>
+		<div class="main">
+			<form action="" method="post">
+				<p>Телефон</p>
+				<p><span class="editf"><input type="text" name="tel" value="" placeholder="Введите 10 цифр начиная с 9"/></span></p></br></br>
+				<p>Пароль&nbsp;<span class="icon taxi-icon-question-circle"></span></p>
+				<div class="hidden-msg">Мы отправляли Вам пароль по SMS</div>
+				<p><span  class="editf"><input type="text" name="password" value="" placeholder=""/></span></p>
+				<div class="hidden-msg passw"><br>Если Вы забыли пароль, введите номер телефона и нажмите "Получить пароль". Пароль будет отправлен по SMS.</div>
+				<div class="error-msg"></div>
+				<p>
+					<input type="button" class="send" value="Авторизоваться" />
+					<input type="button" class="getpass" value="Получить пароль" />
+				</p>
+			</form>
+		</div>
+	</div>
+
+
+	<div id="order" class="modal">
+		<span class="icon taxi-icon-times-circle close" title="Закрыть окно авторизации"></span>
+		<div class="header">Оформление заказа такси</div>
+		<div class="main">
+			<form>
+				<input type="hidden" name="tel" value="">
+				<input type="hidden" name="password" value="">
+				<input type="hidden" name="lgota" value="false">
+				<input type="hidden" name="vip" value="false">
+				<input type="hidden" name="price" value="">
+				<input type="hidden" name="stat_drive_avto_vip">
+				<input type="hidden" name="sum_lgot_ezdki">
+				<input type="hidden" name="cena_bag">
+				<div class="auto_type">Выберите класс автомобиля:&nbsp;
+					<input type="hidden" name="auto_type" value="1">
+					<span>Стандарт&nbsp;<span data-icon="l" class="icon"></span></span>
+					<div>
+						<ul>
+							<li data-rowid="1">Стандарт</li>
+							<li data-rowid="2">Комфорт</li>
+						</ul>
+					</div>
+				</div>
+				<div class="options">
+					<label for="baby1">С детьми (1 ребенок)</label><input type="checkbox" name="baby1" id="baby1" value="1">
+					<label for="baby2">С детьми (2 детей)</label><input type="checkbox" name="baby2" id="baby2" value="2">
+					<label for="bag">Багаж в салоне</label><input type="checkbox" name="bag" id="bag" value="1">
+					<label for="animals">С домашним животным</label><input type="checkbox" name="animals" id="animals" value="1">
+				</div>
+				<div class="info-msg">Пожалуйста, укажите начальный и конечный пункт отправления, после чего стоимость поездки будет рассчитана автоматически, и Вы сможете подтвердить заказ.</div>
+				<div class="main_cont">
+					<div class="block active"><p><span data-icon="b" class="icon"></span>&nbsp;Пункт отправления</p>
+						<div class="withlist">
+							<span class="caption">Улица</span>
+							<span  class="editf"><input type="text" name="street" autocomplete="off" value="" placeholder="Начните вводить..."/></span>
+							<input type="hidden" name="street1">
+							<div class="list">
+
+							</div>
+						</div>
+						<div class="number">
+							<div>
+								<span class="caption">Дом</span>
+								<span  class="editf"><input type="text" name="house1" class="house" placeholder="№"/></span>
+							</div>
+							<div>
+								<span class="caption">Корпус</span>
+								<span  class="editf"><input type="text" name="korp1" class="one korp" placeholder="№"/></span>
+							</div>
+							<div>
+								<span class="caption">Подъезд</span>
+								<span  class="editf"><input type="text" name="pod1" class="one pod" placeholder="№"/></span>
+							</div>
+						</div>
+					</div>
+					<div class="block"><p><span data-icon="b" class="icon"></span>&nbsp;Пункт прибытия</p>
+						<div class="withlist">
+							<span class="caption">Улица</span>
+							<span  class="editf"><input type="text" name="street" autocomplete="off" placeholder="Начните вводить..."/></span>
+							<input type="hidden" name="street2">
+							<div class="list">
+								<ul data-ftype="street2">
+
+								</ul>
+							</div>
+						</div>
+						<div class="number">
+							<div>
+								<span class="caption">Дом</span>
+								<span  class="editf"><input type="text" name="house2" class="house" placeholder="№"/></span>
+							</div>
+							<div>
+								<span class="caption">Корпус</span>
+								<span  class="editf"><input type="text" name="korp2" class="one korp" placeholder="№"/></span>
+							</div>
+							<div style="display: none;">
+								<span class="caption">Подъезд</span>
+								<span  class="editf"><input type="text" name="pod2" class="one pod" placeholder="№"/></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="addblock"><span>+ Добавить к маршруту</span></div>
+					<p>Комментарий</p>
+					<input type="text" maxlength="15" name="comment">
+					<!--<div class="getprice"><span>Рассчитать стоимость</span></div>-->
+					<div class="info-msg">Просьба не игноировать поля "Корпус" и "Подъезд" для более точного определения Вашего местоположения.</div>
+					<div class="error-msg"></div>
+					<p>
+						<input type="button" class="send_order" value="Рассчитать стоимость поездки" />
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+	<div class="order_block_cont">
+		<div class="block"><p><span data-icon="b" class="icon"></span>&nbsp;Пункт прибытия</p>
+			<div class="withlist">
+				<span class="caption">Улица</span>
+				<span  class="editf"><input type="text" name="street"  placeholder="Начните вводить..."/></span>
+				<input type="hidden" name="street_">
+				<div class="list">
+					<ul data-ftype="street_">
+
+					</ul>
+				</div>
+			</div>
+			<div class="number">
+				<div>
+					<span class="caption">Дом</span>
+					<span  class="editf"><input type="text" name="house1" class="house" placeholder="№"/></span>
+				</div>
+				<div>
+					<span class="caption">Корпус</span>
+					<span  class="editf"><input type="text" name="korp1" class="one korp" placeholder="№"/></span>
+				</div>
+				<div>
+					<span class="caption">Подъезд</span>
+					<span  class="editf"><input type="text" name="pod1" class="one pod" placeholder="№"/></span>
+				</div>
+			</div>
+			<div data-icon="f" class="icon close_block"></div>
+		</div>
+	</div>
+	<div class="overlay"></div>
+		<!---strat-wrap----->
+			<!---strat-header----->
+			<div class="header"  id="top">
+				<div class="wrap">
+					<!---start-logo---->
+					<div class="logo">
+						<a href="/"><img src="web/images/logo.png" title="logo" /></a>
+					</div>
+					<!---End-logo---->
+					<!---start-top-nav---->
+					<div class="top-nav">
+						<ul>
+							<li class="active"><a href="index.php#top" class="scroll2">Главная</a></li>
+							<li><a href="index.php#about" class="scroll2">О компании</a></li>
+							<li><a href="index.php#noradio" class="scroll2">Работа без рации</a></li>
+							<li><a href="index.php#news" class="scroll2">Новости</a></li>
+							<li><a href="index.php#rates" class="scroll2">Тарифы</a></li>
+							<li><a href="index.php#contact" class="scroll2">Обратная связь</a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+					<div class="clear"> </div>
+					<!---End-top-nav---->
+				</div>
+
+		 <!--End-image-slider---->
+		 <!---start-contnet---->
+		 <div class="content">
+		 	<div class="top-grids">
+		 		<div class="wrap">
+			 		<h3>ПЕРВОЕ ГОРОДСКОЕ ТАКСИ</h3>
+			 		<h2>СНЕЖОК</h2>
+			 		<h4>28-0000</h4>
+					<div>
+						<div><a class="join modal_auth" href="#auth">Сделать заказ онлайн</a></div><br>
+						<div><a class="what" href="https://play.google.com/store/apps/details?id=ru.bay.taxi.booking.snezhok">Скачать приложение «заказ такси» для Android</a></div>
+						<div class="clear"> </div>
+					</div>
+		 		</div>
+		 	</div>
