@@ -13,11 +13,11 @@ if((isset($_POST['json'])) && (!empty($_POST['json'])) && (isset($_POST['tel']))
     }
     else
     {
-        print '{"error":"yes","error_type":"?? ??????? ????????? ?????"}';
+        print '{"error":"yes","error_type":"Не удалось отправить заказ"}';
     }
     //print 'OK';
 }
 else {
-    print '{"error":"yes","error_type":"?? ??????? ???????? ?????"}';
+    print '{"error":"yes","error_type":"Ну удалось оформить заказ"}';
 }
 ?>
